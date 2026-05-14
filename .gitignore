@@ -1,60 +1,26 @@
-<<<<<<< HEAD
-HELP.md
-.gradle
-=======
 # ===== 절대 올리면 안 되는 것 =====
-src/main/resources/application-local.yml
+src/main/resources/application-local.yaml
 src/main/resources/application-local.properties
+application.yaml
+application-*.yaml
+application.yml
+application-*.yml
 
 # ===== Gradle =====
 .gradle/
->>>>>>> 1cc8be6cf5f154e0672983ac958d0386189729ee
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-<<<<<<< HEAD
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-=======
 # ===== IntelliJ =====
 .idea/
 *.iml
 *.iws
->>>>>>> 1cc8be6cf5f154e0672983ac958d0386189729ee
+*.ipr
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
-<<<<<<< HEAD
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-=======
-# ===== VS Code =====
-.vscode/
 
 # ===== Java =====
 *.class
@@ -63,9 +29,14 @@ out/
 *.ear
 hs_err_pid*
 
+# ===== VS Code =====
+.vscode/
+
 # ===== macOS =====
 .DS_Store
 
 # ===== Windows =====
 Thumbs.db
->>>>>>> 1cc8be6cf5f154e0672983ac958d0386189729ee
+
+# ===== Misc =====
+HELP.md
