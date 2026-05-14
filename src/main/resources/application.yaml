@@ -24,3 +24,8 @@ springdoc:
     path: /swagger-ui.html
   api-docs:
     path: /api-docs
+
+gemini:
+  api:
+    key: AIzaSyDzaBHEPxpIZi9vBfMhuiekGEEhSu30wXk
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
