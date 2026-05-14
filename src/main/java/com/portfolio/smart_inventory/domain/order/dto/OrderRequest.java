@@ -8,6 +8,8 @@ import java.time.LocalDate;
 @Getter
 public class OrderRequest {
 
+    private Long inventoryId;       // 연동할 재고 ID (선택)
+
     @NotBlank(message = "품목명은 필수입니다.")
     private String itemName;
 

@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class OrderResponse {
 
     private Long id;
+    private Long inventoryId;       // 연동된 재고 ID
     private String itemName;
     private Integer quantity;
     private Integer unitPrice;
@@ -25,6 +26,7 @@ public class OrderResponse {
     public static OrderResponse from(Order order) {
         return OrderResponse.builder()
                 .id(order.getId())
+                .inventoryId(order.getInventory() != null ? order.getInventory().getId() : null)
                 .itemName(order.getItemName())
                 .quantity(order.getQuantity())
                 .unitPrice(order.getUnitPrice())

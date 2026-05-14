@@ -42,4 +42,11 @@ public class OrderController {
         orderService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    // 납품완료 처리 → 재고 자동 증가
+    @PatchMapping("/{id}/deliver")
+    public ResponseEntity<OrderResponse> deliver(@PathVariable Long id) {
+        return ResponseEntity.ok(orderService.deliver(id));
+    }
+
 }

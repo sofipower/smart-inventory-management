@@ -58,4 +58,10 @@ public class Inventory {
     public boolean isBelowSafetyStock() {
         return this.currentStock <= this.safetyStock;
     }
+
+    // 재고 증가 (납품완료 시 호출)
+    public void increaseStock(int quantity) {
+        this.currentStock += quantity;
+    }
+
 }

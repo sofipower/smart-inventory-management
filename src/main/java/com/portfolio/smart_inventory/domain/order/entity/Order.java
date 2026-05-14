@@ -1,5 +1,6 @@
 package com.portfolio.smart_inventory.domain.order.entity;
 
+import com.portfolio.smart_inventory.domain.inventory.entity.Inventory;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -16,6 +17,10 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "inventory_id")
+    private Inventory inventory;       // FK → inventory 테이블
 
     @Column(nullable = false)
     private String itemName;        // 품목명
@@ -64,5 +69,13 @@ public class Order {
         this.supplier = supplier;
         this.dueDate = dueDate;
         this.status = status;
+    }
+
+    public void updateStatus(OrderStatus status) {
+        this.status = status;
+    }
+
+    public void linkInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 }
