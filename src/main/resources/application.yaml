@@ -29,3 +29,7 @@ gemini:
   api:
     key: AIzaSyDzaBHEPxpIZi9vBfMhuiekGEEhSu30wXk
     url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+
+jwt:
+  secret: smart-inventory-jwt-secret-key-must-be-at-least-32-characters-long
+  expiration-ms: 86400000  # 24시간
