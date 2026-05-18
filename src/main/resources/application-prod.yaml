@@ -16,3 +16,7 @@ gemini:
 
 server:
   port: ${PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration-ms: 86400000
